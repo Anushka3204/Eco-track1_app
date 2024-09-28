@@ -92,6 +92,63 @@
     #quizButton {
         margin-top: 20px;
     }
+/* Media Query for Phones */
+@media (max-width: 480px) {
+    body {
+        height: auto; /* Allow body height to adjust dynamically */
+        display: flex;
+        flex-direction: column; /* Arrange items in a single column */
+        align-items: center; /* Center items horizontally */
+        justify-content: flex-start; /* Align items to start from the top */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+    .content{
+        margin: 0;
+        padding: 15px !important;
+    }
+    h1 {
+        font-size: 25px !important;  /* Reduced font size */
+        margin: 10px 0;   /* Adjusted margin to provide more space */
+        word-wrap: break-word; /* Ensure long text wraps */
+        text-align: center; /* Center align text */
+    }
+    p {
+        font-size: 18px !important; /* Smaller font size */
+        margin: 5px 0;
+        padding: 0;
+        text-align: center; /* Center align paragraph */
+    }
+    input[type="text"] {
+        width: 100%;      /* Full width for input */
+        padding: 8px;
+        margin: 5px 0;
+        margin-bottom: 20px;
+    }
+    button {
+        width: 100%;      /* Full width for buttons */
+        padding: 10px;
+        font-size: 12px;  
+        margin: 5px 0;
+    }
+    #result {
+        width: 95%;      
+        padding: 10px;    
+    }
+    #result p {
+        font-size: 12px;  
+    }
+    .container {
+        width: 100%;      
+        margin-top: 0;    /* Set to 0 to avoid hiding */
+        padding: 10px;    
+        box-sizing: border-box;
+    }
+    .overlay {
+        background-size: cover; /* Ensure background covers the screen */
+        background-position: center;
+    }
+}
+
 </style>
 </head>
 <body>

@@ -56,19 +56,24 @@
             opacity: 1;
         }
     </style>
+      <script>
+        function toggleMenu() {
+            const navList = document.getElementById("nav-list");
+            navList.classList.toggle("show");
+        }
+    </script>
 </head>
 <body>
     <nav id="navbar">
-        <div id="logo">
-            <img src="logo.png" alt="EcoTrack.com" />
-        </div>
-        <ul>
-            <li class="item"><a href="#home">Home</a></li>
-            <li class="item"><a href="#client-section">About Us</a></li>
-            <li class="item"><a href="#services">Explore</a></li>
-            <li class="item"><a href="#Contact Us">Feedback</a></li>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#client-section">About Us</a></li>
+            <li><a href="#services">Explore</a></li>
+            <li><a href="#Contact Us">Feedback</a></li>
         </ul>
     </nav>
+    
 
     <section id="home">
         <h1 class="primary">Welcome To EcoTrack</h1>
