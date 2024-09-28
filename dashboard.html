@@ -56,6 +56,30 @@ body {
         .div3 {
             background-color: blue;
         }
+        @media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .main-div > div {
+        width: 100%; /* Make divs take full width */
+        margin: 5px 0; /* Reduce margin */
+    }
+
+    .main-div {
+        flex-direction: column; /* Stack charts vertically */
+        align-items: center;    /* Center the charts */
+    }
+
+    canvas {
+        max-width: 100%; /* Ensure canvas doesn't overflow */
+    }
+
+    h2, p {
+        font-size: 14px; /* Reduce font size for better readability */
+        text-align: center;
+    }
+}
     </style>
 </head>
 
