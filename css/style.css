@@ -4,77 +4,63 @@
 }
 
 
-
-/* Navigation Bar */
-#navbar{
-    display:flex;
-    align-items:center;
-
-
-
-}
-/* Logo and image */
-
-
-
-#logo img{
-
-    height: 50px;
-    margin: 3px 7px;
-    /* z-index: 2; */
-  
-}
-
-
-
-
-
-/* navbar list sytling */
-#navbar{
+/* Base navbar styles */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px;
     position: relative;
+    background-color: #02380e; 
 }
 
-#navbar ul{
-    display:flex;
-
+#navbar ul {
+    display: flex;
 }
 
- #navbar::before{
-    content:"";
-    background-color:#02380e ;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-    /* opacity: 0.4; */
-
-} 
-#navbar ul li{
-  list-style: none;
-    font-size: 1.2rem;
-    padding: 3px 30px;
-    display:block;
-    border-radius: 20px;
-    text-decoration: none;
-    z-index: 1;
-    
-}
-
-
-#navbar ul li a{
-    display:block;
-    color: white;
+#navbar ul li {
     list-style: none;
-    text-decoration: none;
-    font-family: 'Arvo', serif;
-    font-family: 'Signika', sans-serif;
-
+    padding: 3px 30px;
 }
 
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Signika', sans-serif;
+}
+
+.hamburger {
+    display: none; 
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin-right: 10px;
+    z-index: 2;
+}
 #navbar ul li a:hover{
-   color: rgb(12, 21, 16);
-   background-color: white;
-   border-radius: 7px;
+    color: rgb(12, 21, 16);
+    background-color: white;
+    border-radius: 7px;
+ }
+@media screen and (max-width: 768px) {
+    #navbar ul {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #02380e; 
+        width: 100%; 
+        text-align: center;
+    }
+
+    #navbar ul.show {
+        display: flex; 
+    }
+
+    .hamburger {
+        display: block; 
+    }
 }
 
 /* home section */
@@ -112,6 +98,11 @@
     opacity: 0.66;
 
 } 
+@media (max-width: 600px) {
+    #home {
+        padding: 3px 20px; /* Adjust padding for smaller screens */
+    }
+}
 
 a {
     text-decoration: none; /* Remove underline */
@@ -189,6 +180,7 @@ font-family: 'Signika', sans-serif;
     font-family: 'Signika', sans-serif;
     border-radius: 10px;
     cursor: pointer;
+    width: max-content;
 
 }
 
@@ -229,10 +221,6 @@ font-family: 'Signika', sans-serif;
 
 
 
-
-
-
-
 #services .box img{
 
  height:160px;
@@ -265,7 +253,7 @@ font-family: 'Signika', sans-serif;
 #client img{
     height: 140px;
     /* width: 100px; */
-  
+  width: auto;
     justify-content: center;
     align-items:center;
     text-align: center;
@@ -302,6 +290,13 @@ font-family: 'Signika', sans-serif;
     z-index: -1;
     opacity: 0.7; 
 } 
+@media (max-width: 768px) {
+    #client-section::before {
+      width: 89%; /* Adjust to fit the mobile screen */
+      height: 170%; /* Reduce height to fit content properly */
+    }
+  }
+  
 #client-section{
     position: relative;
 }
@@ -444,5 +439,60 @@ footer{
         
         }
        
+       
+    
+.box {
+    cursor: pointer;
+    transition: transform 0.4s ease; 
+  }
+  
+  .box:hover {
+    transform: scale(1.05); /* Scale the box slightly larger on hover */
+  }
+  @media screen and (max-width: 768px) {
+    .box {
+        height: auto; 
+        padding: 10px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        height: auto; 
+    }
+}
+@media (max-width: 600px) {
+    #services .box {
+        width: 100%; 
+        height: auto; 
+        padding: 10px; 
+    }
+
+    #services .box p {
+        font-size: 14px; 
+        line-height: 1.4;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .service-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #services {
+        display: flex; 
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    #services .box {
+        width: 70%; 
+        margin: 10px 0; 
+        padding: 15px; 
+    }
+}
 
   
